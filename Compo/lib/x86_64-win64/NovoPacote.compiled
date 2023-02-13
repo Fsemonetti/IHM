@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\Users\fabricio.semonetti\Downloads\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1429738194"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FuC:\Users\fabricio.semonetti\Downloads\lazarus\packager\units\x86_64-win64 -FuC:\Users\fabricio.semonetti\Downloads\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\Users\fabricio.semonetti\Downloads\lazarus\components\freetype\lib\x86_64-win64 -FuC:\Users\fabricio.semonetti\Downloads\lazarus\lcl\units\x86_64-win64 -FuC:\Users\fabricio.semonetti\Downloads\lazarus\lcl\units\x86_64-win64\win32 &quot;-FuC:\Users\fabricio.semonetti\OneDrive - DIAMANTE\Documentos\Compo\&quot; &quot;-FUC:\Users\fabricio.semonetti\OneDrive - DIAMANTE\Documentos\Compo\lib\x86_64-win64\&quot; -dLCL -dLCLwin32 novopacote.pas"/>
+</CONFIG>

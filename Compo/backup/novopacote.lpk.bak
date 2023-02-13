@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="NovoPacote"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files Count="15">
+      <Item1>
+        <Filename Value="shapef.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="ShapeF"/>
+      </Item1>
+      <Item2>
+        <Filename Value="mutishape.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="Mutishape"/>
+      </Item2>
+      <Item3>
+        <Filename Value="GGAUGE.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="GGAUGE"/>
+      </Item3>
+      <Item4>
+        <Filename Value="PROGRESS.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="PROGRESS"/>
+      </Item4>
+      <Item5>
+        <Filename Value="ALProgressBar.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="ALProgressBar"/>
+      </Item5>
+      <Item6>
+        <Filename Value="RLed.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="RLed"/>
+      </Item6>
+      <Item7>
+        <Filename Value="gridparaprogressbar.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="gridparaprogressbar"/>
+      </Item7>
+      <Item8>
+        <Filename Value="janRoundedButton.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="janRoundedButton"/>
+      </Item8>
+      <Item9>
+        <Filename Value="atshapeline.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="atshapeline"/>
+      </Item9>
+      <Item10>
+        <Filename Value="gridparaprogressCur.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="gridparaprogresscur"/>
+      </Item10>
+      <Item11>
+        <Filename Value="AMAdvLed.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="AMAdvLed"/>
+      </Item11>
+      <Item12>
+        <Filename Value="EscalaQualquer.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="EscalaQualquer"/>
+      </Item12>
+      <Item13>
+        <Filename Value="valve.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="Valve"/>
+      </Item13>
+      <Item14>
+        <Filename Value="MultiLineBitBtn.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="MultiLineBitBtn"/>
+      </Item14>
+      <Item15>
+        <Filename Value="panelestacaomotor.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="PanelEstacaoMotor"/>
+      </Item15>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>
