@@ -1,0 +1,170 @@
+ unit PanelEstacaoMotor;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils,extctrls,StdCtrls,Graphics;
+       type
+
+        { TPanelEstacaoMotor }
+
+        TPanelEstacaoMotor = Class(TPanel)
+          private
+            Bdesliga : Tbutton;
+            BLiga    : Tbutton;
+            FDescriInferior: string;
+            FDescriSuperior: string;
+            LDesligado:Tshape;
+            LLigado   :Tshape;
+            LFalha    :Tshape;
+            Pisca     : Ttimer;
+            Nome      : Tlabel;
+            NomeS     : Tlabel;
+            procedure SetDescriInferior(AValue: string);
+            procedure SetDescriSuperior(AValue: string);
+
+          public
+            constructor Create(TheOwner: TComponent); override;
+            destructor Destroy; override;
+            procedure Paint; override;
+            Function Tamanho(Texto:String; Fonte:TFont) : integer;
+            published
+            property DescriSuperior : string read FDescriSuperior write SetDescriSuperior;
+            property DescriInferior : string read FDescriInferior write SetDescriInferior;
+
+
+        end;
+  procedure Register;
+implementation
+
+{ TPanelEstacaoMotor }
+procedure Register;
+begin
+  RegisterComponents('Fabricio', [TPanelEstacaoMotor]);
+end;
+Function TPanelEstacaoMotor.Tamanho(Texto:String; Fonte:TFont) : integer;
+var
+  LBmp: TBitmap;
+begin
+  LBmp := TBitmap.Create;
+  try
+   LBmp.Canvas.Font := Font;
+   Result := LBmp.Canvas.TextWidth(Texto);
+  finally
+   LBmp.Free;
+  end;
+end;
+
+
+procedure TPanelEstacaoMotor.SetDescriInferior(AValue: string);
+
+begin
+  if FDescriInferior=AValue then Exit;
+  FDescriInferior:=AValue;
+  Nome.Left:=round((120-Tamanho(Avalue,Nome.Font))/2);
+  Nome.Caption:=AValue;
+end;
+
+procedure TPanelEstacaoMotor.SetDescriSuperior(AValue: string);
+begin
+  if FDescriSuperior=AValue then Exit;
+  FDescriSuperior:=AValue;
+  NomeS.Caption:=AValue;
+  NomeS.Left:=round((120-Tamanho(Avalue,NomeS.Font))/2);
+  NomeS.Caption:=AValue;
+end;
+
+constructor TPanelEstacaoMotor.Create(TheOwner: TComponent);
+begin
+  inherited Create(TheOwner);
+  Caption:='';
+  Color:=$00808040;
+  Width:=120;
+  Height:=60;
+  Top:=50;;
+  Left:=50;
+
+  Bdesliga:= Tbutton.Create(nil);
+  Bdesliga.parent:=self;
+  Bdesliga.Color:=8;
+  Bdesliga.Width:=20;
+  Bdesliga.Height:=20;
+  Bdesliga.Top:=40;;
+  Bdesliga.Left:=0;
+  Bdesliga.Caption:='';
+
+
+  BLiga:= Tbutton.Create(nil);
+  BLiga.parent:=self;
+  BLiga.Color:=8;
+  BLiga.Width:=20;
+  BLiga.Height:=20;
+  BLiga.Top:=40;;
+  BLiga.Left:=99;
+  Bliga.Caption:='';
+
+  Nome:= Tlabel.Create(nil);
+  Nome.Parent:=self;
+  Nome.Caption:='Motor';
+  Nome.Top:=27;;
+  Nome.Left:=4;
+
+  NomeS:= Tlabel.Create(nil);
+  NomeS.Parent:=self;
+  NomeS.Caption:='Motor';
+  NomeS.Top:=17;;
+  NomeS.Left:=4;
+
+  Pisca:=Ttimer.create(nil);
+
+  LDesligado:=Tshape.create(nil);
+  LDesligado.parent:=self;
+  LDesligado.Color:=8;
+  LDesligado.Width:=18;
+  LDesligado.Height:=18;
+  LDesligado.Top:=1;;
+  LDesligado.Left:=2;
+  LDesligado.Brush.Color:=clGray;
+
+  LFalha:=Tshape.create(nil);
+  LFalha.parent:=self;
+  LFalha.Color:=8;
+  LFalha.Width:=18;
+  LFalha.Height:=18;
+  LFalha.Top:=1;;
+  LFalha.Left:=50;
+  LFalha.Brush.Color:=clMenuBar;
+  LFalha.Shape:=stCircle;
+
+  LLigado:=Tshape.create(nil);
+  LLigado.parent:=self;
+  LLigado.Color:=8;
+  LLigado.Width:=18;
+  LLigado.Height:=18;
+  LLigado.Top:=1;
+  LLigado.Left:=101;
+  LLigado.Brush.Color:=clMenuBar;
+
+end;
+
+destructor TPanelEstacaoMotor.Destroy;
+begin
+  inherited Destroy;
+  Bdesliga.Destroy;
+  BLiga.Destroy;
+  LLigado.Destroy;
+  LDesligado.Destroy;
+  LFalha.Destroy;
+  Pisca.Destroy;
+
+end;
+
+procedure TPanelEstacaoMotor.Paint;
+begin
+  inherited Paint;
+end;
+
+end.
+
